@@ -1,0 +1,24 @@
+{
+  "name": "poor-mans-latex",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "license": "AGPL-3.0-only",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "@sveltejs/vite-plugin-svelte": "^2.0.2",
+    "@types/markdown-it": "^12.2.3",
+    "bootstrap": "^5.2.3",
+    "highlight.js": "^11.7.0",
+    "katex": "^0.16.4",
+    "markdown-it": "^13.0.1",
+    "markdown-it-highlightjs": "^4.0.1",
+    "markdown-it-katexx": "^3.2.0",
+    "svelte": "^3.55.1",
+    "vite": "^4.1.0"
+  }
+}
