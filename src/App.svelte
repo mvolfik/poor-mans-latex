@@ -74,7 +74,10 @@
       >
       <button
         on:click={() => {
-          projects = [...projects, { ...currentProject, name: prompt("Name:") }];
+          projects = [
+            ...projects,
+            { ...currentProject, name: prompt("Name:") },
+          ];
           selected = (projects.length - 1).toString();
         }}
       >
@@ -126,25 +129,33 @@
 </main>
 
 <style>
-  main {
-    max-width: 60em;
-    margin: 0 auto;
-    padding: 1.5em;
-  }
   @media print {
     #input {
       display: none;
     }
+
+    main {
+      padding: 0 1em;
+    }
+
+    #header {
+      display: flex;
+      justify-content: space-between;
+      align-items: end;
+      margin: 0 -1em 1em;
+      padding: 0 1em 0.5em;
+      border-bottom: 1px solid black;
+    }
   }
-  #header {
-    display: flex;
-    justify-content: space-between;
-    align-items: end;
-    margin: 0 -1em 1em;
-    padding: 0 1em 0.5em;
-    border-bottom: 1px solid black;
-  }
+
   @media not print {
+    main {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1em;
+      padding: 1.5em;
+    }
+
     #header {
       display: none;
     }
